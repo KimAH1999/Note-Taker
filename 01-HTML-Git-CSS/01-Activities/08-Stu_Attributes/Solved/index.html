@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Student Bio With Attributes</title>
+    <!-- Link to stylesheet using rel and href attributes -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+  </head>
+
+  <body>
+    <header>
+      <h1 class="headers">Student Bio</h1>
+    </header>
+
+    <!-- Class attribute with name "section" -->
+    <section class="section">
+      <h2>Your Name</h2>
+      <!--Image using src to point to relative path and descriptive alt attributes-->
+      <img src="./assets/images/image-1.jpg" alt="Placeholder image with text 200 width and 200 height ">
+      <p>Write a short paragraph or two about yourself</p>
+    </section>
+    
+    <!--Class attribute with name "section"-->
+    <section class="section">
+      <h2 class="headers">Contact Info</h2>
+      <ul>
+        <!--Anchor tags using href to link to external website-->
+        <!--id attributes to provide unique identifier for element-->
+        <li id="email"><strong>Email:</strong> <a href="#">someplace@gmail.com</a></li>
+        <li id="github"><strong>GitHub:</strong> <a href="#">sampleName</a></li>
+        <li id="portfolio"><strong>Portfolio:</strong> <a href="#">coming soon</a></li>
+      </ul>
+    </section>
+  </body>
+
+</html>
