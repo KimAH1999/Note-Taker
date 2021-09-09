@@ -11,6 +11,7 @@ body {
 section {
   height: 200px;
   width: 300px;
+  background-color:purple
 }
 
 p {
@@ -28,4 +29,8 @@ p {
 #box-orange {
   color: blue;
   background-color: orange;
+}
+
+section.box-blue {
+  background-color:yellow;
 }
