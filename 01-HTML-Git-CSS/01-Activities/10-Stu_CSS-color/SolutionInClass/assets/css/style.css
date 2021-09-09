@@ -1,0 +1,28 @@
+
+.section {
+    width: 200px;
+    height: 100px;
+  }
+  
+.section-blue {
+  color:orange;
+  background-color: blue
+}
+  
+.container {
+  background-color: black;
+  color: white;
+}
+
+#section-1 {
+  color: yellow;
+  background-color:purple
+}
+
+#section-6 {
+  color:yellow;
+}
+
+.greencolor {
+  color: green;
+}
