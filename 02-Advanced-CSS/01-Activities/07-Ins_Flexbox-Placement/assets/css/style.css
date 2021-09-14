@@ -14,7 +14,7 @@ body {
   justify-content: center;
   /* Centers along the opposite axis */
   align-items: center;
-  width: 90%;
+  width: 100vw;
   /* Uses the height of the viewport */
   height: 100vh;
   margin: 0 auto;
