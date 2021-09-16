@@ -17,39 +17,9 @@ h1 {
   font-size: 200%;
 }
 
-/* Added the rest of the header text */
-h1::after {
-  font-family: Impact;
-  content: 'Pseudo Elements 🚀';
-  color: #8ac4ff;
-  margin-left: 5px;
-}
-
 h2 {
   margin: 2% 0;
   font-size: 180%;
-}
-
-h3 {
-  margin: 2% 0;
-  font-size: 150%;
-}
-
-/* Added asterisk before every h3 heading */
-h3::before {
-  font-family: Impact;
-  content: '🐙';
-  color: #772014;
-  margin-right: 5px;
-}
-
-/* Added symbols before and after the nav links */
-nav li::before,
-nav li::after {
-  content: '\2766';
-  color: #8ac4ff;
-  padding: 1%;
-  font-family: cursive;
 }
 
 nav ul {
@@ -59,7 +29,7 @@ nav ul {
 }
 
 nav a {
-  color: #b9C6ae;
+  color: #b9c6ae;
   font-weight: bold;
   text-decoration: none;
 }
@@ -89,12 +59,37 @@ article p {
   font-size: 110%;
 }
 
-article ul {
-  margin-left: 5%;
-  margin-bottom: 2%;
-  font-size: 110%;
-  list-style: circle;
+/* TODO: Style the keyword - underline, black text, grab cursor */
+
+#css {
+  text-decoration: underline;
+  color: #000;
 }
+
+.spanparent { 
+  position:relative;
+  background:red;
+}
+
+#css:hover { 
+  cursor: pointer;
+}
+
+#css:hover::after {
+  /* content: "Cascading Style Sheets 🐷 "; */
+  content: attr(data-descr);
+  position: absolute;
+  top:-50px;
+  left:20;
+  padding: 5px;
+  text-align: center;
+  height: 40px;
+  background-color: #13293d;
+  color: #fff;
+}
+
+
+/* TODO: Position tooltip above the keyword, same color as header and nav links, no border-radius, smaller font size */
 
 aside {
   width: 25%;
@@ -119,8 +114,31 @@ footer {
   color: #fff;
 }
 
+.resources .links {
+  display: none;
+  padding: 1% 0;
+}
+
+.resources:hover .links {
+  display: block;
+}
+
+.resources h3 {
+  font-size: 150%;
+}
+
+.links a {
+  color: #772014;
+  text-decoration: none;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
 @media screen and (max-width: 768px) {
-  header, main {
+  header,
+  main {
     flex-direction: column;
   }
 

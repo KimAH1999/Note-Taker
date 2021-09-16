@@ -23,6 +23,7 @@ button:hover {
 button:active {
   font-size: 180%;
   box-shadow: 0 0 10px #000 inset;
+  background-color:blue;
 }
 
 /* The element is currently in focus, either by tabbing to or clicking on it */
