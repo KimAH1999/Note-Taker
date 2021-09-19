@@ -60,34 +60,43 @@ article ul {
   list-style: circle;
 }
 
-article li {
-  margin: 5px 0;
-}
-
-/* Use :nth-child() to select every even list item */
-article ul li:nth-child(even) {
-  background-color: red;
-  color: #13293d;
-}
-
-/* Use adjacent sibling combinator (+) to select all <p> elements that come immediately after a <ul> element inside of an <article> element */
-article ul + p {
-  background-color: #13293d;
-  color: #fff;
-}
-
-/* Use child combinator (>) with a wildcard selector (*) to select every single element that is a direct descendant (or child) of any <div> element in an <article> element */
-article div > * {
-  padding: 20px;
-  border: 4px solid green;
-}
-
 footer {
   display: flex;
   justify-content: center;
   padding: 2%;
   background-color: #13293d;
   color: #fff;
+}
+
+/* TODO: Add code here to select all <a> elements that link to a file with a `.css` extension */
+
+/* Way one ---------------*/
+/* article ul li a::after {
+  content:"🐙";
+  margin-left: 5px;
+}
+
+article ul li:first-of-type a:after {
+  content:""
+}
+
+article ul li:last-of-type a:after {
+  content:""
+} */
+
+
+/* way two-------------------- */
+/* 
+::after { 
+  content:"🐙";
+  margin-left: 5px;
+} */
+
+
+/* third way------------------ */
+article ul li:not(:first-child):not(:last-child) a::after {
+  content:"🐙";
+  margin-left: 5px;
 }
 
 @media screen and (max-width: 768px) {
