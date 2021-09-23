@@ -19,7 +19,7 @@ var isMyBooleanFalse = false;
 console.log(typeof myUndefined);
 
 // Logs number
-console.log(typeof myNumberInt); 
+console.log(typeof myNumberDecimal); 
 
 // Logs boolean
 console.log(typeof true);
