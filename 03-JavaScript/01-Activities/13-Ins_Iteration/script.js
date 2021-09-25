@@ -5,7 +5,7 @@ for (var i = 0; i < 5; i++) {
 }
 
 // For-loops are often used to iterate over arrays
-var zooAnimals = ["Bears", "Giraffes", "Penguins", "Meerkats"];
+var zooAnimals = ["Bears", "Giraffes", "Penguins", "Meerkats", "Chubby Unicorns"];
 
 //To determine how many times the loop should execute, we use the array's length
 for (var i = 0; i < zooAnimals.length; i++) { 
