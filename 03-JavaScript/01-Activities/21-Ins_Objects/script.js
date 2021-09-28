@@ -1,3 +1,25 @@
+var home = {
+  address:"1233 camera st.",
+  phone: 1234567890,
+  rooms:["1bd","2bd","4bd"],
+  isVacant: true,
+  "how-long": false,
+  "2016-2018":"Best Year Ever",
+  "2019-2021":"some data"
+}
+
+console.log("Whats your Address?")
+console.log(home.address)
+
+// console.log(home.2016-2018)
+console.log(home["2016-2018"])
+
+console.log(home.how-long)
+
+
+
+
+
 // Objects are a collection of properties
 var planet = {
   // Properties are made up of key-value pairs
