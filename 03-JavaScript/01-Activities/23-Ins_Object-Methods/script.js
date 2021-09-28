@@ -1,4 +1,5 @@
 // Objects can store more than primitive data types like strings, booleans and numbers
+var facts =[]
 var planet = {
   name: "Earth",
   age: "4.543 billion years",
@@ -8,13 +9,17 @@ var planet = {
   // Objects can store arrays in a key-value pair
   neighboringPlanets: ["Mars", "Venus"],
   // Objects can also store methods
-  tellFunFact: function () {
-    console.log("The earth is the only planet in our solar system not named after a Roman god or goddess.");
+  tellFunFact: function (fact) {
+    console.log(fact);
+    facts.push(fact) 
+    console.log(facts)
   },
   showWarning: function () {
     console.log("Space junk falls into Earth's atmosphere at a rate of about one a day.");
   }
 };
+
+
 
 // To access a value in an array, use the name of the object, the key and the index.
 // Logs "Mars" using dot notation
@@ -24,6 +29,6 @@ console.log(planet.neighboringPlanets[0]);
 console.log(planet["neighboringPlanets"][0]);
 
 // To call a method, use the name of the object and the key. Don't forget the ()!
-planet.tellFunFact();
+planet.tellFunFact("The earth is the only planet in our solar system not named after a Roman god or goddess.");
+planet.tellFunFact("2016 the bomb")
 planet.showWarning();
-  
