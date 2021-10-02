@@ -43,6 +43,10 @@ function storeTodos() {
   // TODO: Describe the purpose of the following line of code.
   localStorage.setItem("todos", JSON.stringify(todos));
 }
+
+
+
+
 // TODO: Describe the purpose of the following line of code.
 todoForm.addEventListener("submit", function(event) {
   event.preventDefault();

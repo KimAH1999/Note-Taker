@@ -13,6 +13,7 @@ function saveLastGrade() {
   };
   // Use .setItem() to store object in storage and JSON.stringify to convert it as a string
   localStorage.setItem("studentGrade", JSON.stringify(studentGrade));
+  localStorage.setItem("arrString", JSON.stringify([1,"gello", true]))
 }
 
 function renderLastGrade() {
