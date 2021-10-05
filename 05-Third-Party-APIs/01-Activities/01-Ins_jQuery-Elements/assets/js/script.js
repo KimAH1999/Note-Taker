@@ -1,8 +1,13 @@
 // Comments show the vanilla JavaScript equivalent statements
 
 // var rootEl = document.getElementById("root");
-var rootEl = $('#root');
+var rootElJS = document.querySelector('#root')
+console.log("JS Element")
+console.log(rootElJS)
 
+var rootEl = $('#root');
+console.log("000000000000000")
+console.log(rootEl)
 // var titleEl = document.createElement("h1");
 var titleEl = $('<h1>');
 

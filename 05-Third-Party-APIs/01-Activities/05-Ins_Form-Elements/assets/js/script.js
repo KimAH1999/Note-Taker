@@ -19,6 +19,8 @@ function handleFormSubmit(event) {
 
   // Loop through checked options to store in array
   $.each(checkedEl, function () {
+    // $(this) refers to the element no the object
+    // console.log($(this))
     selected.push($(this).val());
   });
   console.log('Toppings: ', selected.join(', '));

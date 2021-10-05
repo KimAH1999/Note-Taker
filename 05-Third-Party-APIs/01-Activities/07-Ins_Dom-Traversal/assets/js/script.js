@@ -2,6 +2,7 @@
 
 // Starting from the `<div id="top">` element, place a blue border around the title of the website, Develop Community Center
 $('#top').siblings().first().addClass('p-5').css('border', '#1bbc9b solid 2px');
+console.log($("#top").siblings()[2])
 
 // Starting from the `<div id="bottom">` element, get a list of its sibling elements and target the fifth one (the `<ul>` element), then change the text on the last item on the list to say "Meetups", not "GitHub"
 $('#bottom').siblings().eq(5).children().last().text('Meetups');
