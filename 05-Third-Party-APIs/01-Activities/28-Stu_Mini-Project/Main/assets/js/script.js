@@ -1,44 +1,44 @@
 // save reference to important DOM elements
-var timeDisplayEl = $('#time-display');
-var projectDisplayEl = $('#project-display');
-var projectModalEl = $('#project-modal');
-var projectFormEl = $('#project-form');
-var projectNameInputEl = $('#project-name-input');
-var projectTypeInputEl = $('#project-type-input');
-var hourlyRateInputEl = $('#hourly-rate-input');
-var dueDateInputEl = $('#due-date-input');
+var timeDisplayEl = $('#time-display')
+var projectDisplayEl = $('#project-display')
+var projectModalEl = $('#project-modal')
+var projectFormEl = $('#project-form')
+var projectNameInputEl = $('#project-name-input')
+var projectTypeInputEl = $('#project-type-input')
+var hourlyRateInputEl = $('#hourly-rate-input')
+var dueDateInputEl = $('#due-date-input')
 
 // handle displaying the time
 function displayTime() {
-  var rightNow = moment().format('MMM DD, YYYY [at] hh:mm:ss a');
-  timeDisplayEl.text(rightNow);
+  var rightNow = moment().format('MMM DD, YYYY [at] hh:mm:ss a')
+  timeDisplayEl.text(rightNow)
 }
 
 // handle printing project data to the page
 function printProjectData(name, type, hourlyRate, dueDate) {
-  var projectRowEl = $('<tr>');
+  var projectRowEl = $('<tr>')
 
-  var projectNameTdEl = $('<td>').addClass('p-2').text(name);
+  var projectNameTdEl = $('<td>').addClass('p-2').text(name)
 
-  var projectTypeTdEl = $('<td>').addClass('p-2').text(type);
+  var projectTypeTdEl = $('<td>').addClass('p-2').text(type)
 
-  var rateTdEl = $('<td>').addClass('p-2').text(hourlyRate);
+  var rateTdEl = $('<td>').addClass('p-2').text(hourlyRate)
 
-  var dueDateTdEl = $('<td>').addClass('p-2').text(dueDate);
+  var dueDateTdEl = $('<td>').addClass('p-2').text(dueDate)
 
-  var daysToDate = moment(dueDate, 'MM/DD/YYYY').diff(moment(), 'days');
-  var daysLeftTdEl = $('<td>').addClass('p-2').text(daysToDate);
+  var daysToDate = moment(dueDate, 'MM/DD/YYYY').diff(moment(), 'days')
+  var daysLeftTdEl = $('<td>').addClass('p-2').text(daysToDate)
 
-  var totalEarnings = calculateTotalEarnings(hourlyRate, daysToDate);
+  var totalEarnings = calculateTotalEarnings(hourlyRate, daysToDate)
 
   // You can also chain methods onto new lines to keep code clean
   var totalTdEl = $('<td>')
     .addClass('p-2')
-    .text('$' + totalEarnings);
+    .text('$' + totalEarnings)
 
   var deleteProjectBtn = $('<td>')
     .addClass('p-2 delete-project-btn text-center')
-    .text('X');
+    .text('X')
 
   // By listing each `<td>` variable as an argument, each one will be appended in that order
   projectRowEl.append(
@@ -49,41 +49,41 @@ function printProjectData(name, type, hourlyRate, dueDate) {
     daysLeftTdEl,
     totalTdEl,
     deleteProjectBtn
-  );
+  )
 
-  projectDisplayEl.append(projectRowEl);
+  projectDisplayEl.append(projectRowEl)
 
-  projectModalEl.modal('hide');
+  projectModalEl.modal('hide')
 }
 
 function calculateTotalEarnings(rate, days) {
-  var dailyTotal = rate * 8;
-  var total = dailyTotal * days;
-  return total;
+  var dailyTotal = rate * 8
+  var total = dailyTotal * days
+  return total
 }
 
 function handleDeleteProject(event) {
-  console.log(event.target);
-  var btnClicked = $(event.target);
-  btnClicked.parent('tr').remove();
+  console.log(event.target)
+  var btnClicked = $(event.target)
+  btnClicked.parent('tr').remove()
 }
 
 // handle project form submission
 function handleProjectFormSubmit(event) {
-  event.preventDefault();
+  event.preventDefault()
 
-  var projectName = projectNameInputEl.val().trim();
-  var projectType = projectTypeInputEl.val().trim();
-  var hourlyRate = hourlyRateInputEl.val().trim();
-  var dueDate = dueDateInputEl.val().trim();
+  var projectName = projectNameInputEl.val().trim()
+  var projectType = projectTypeInputEl.val().trim()
+  var hourlyRate = hourlyRateInputEl.val().trim()
+  var dueDate = dueDateInputEl.val().trim()
 
-  printProjectData(projectName, projectType, hourlyRate, dueDate);
+  printProjectData(projectName, projectType, hourlyRate, dueDate)
 
-  projectFormEl[0].reset();
+  projectFormEl[0].reset()
 }
 
-projectFormEl.on('submit', handleProjectFormSubmit);
-projectDisplayEl.on('click', '.delete-project-btn', handleDeleteProject);
-dueDateInputEl.datepicker({ minDate: 1 });
+projectFormEl.on('submit', handleProjectFormSubmit)
+projectDisplayEl.on('click', '.delete-project-btn', handleDeleteProject)
+dueDateInputEl.datepicker({ minDate: 1 })
 
-setInterval(displayTime, 1000);
+setInterval(displayTime, 1000)
