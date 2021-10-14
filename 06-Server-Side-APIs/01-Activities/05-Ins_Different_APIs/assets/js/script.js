@@ -1,4 +1,4 @@
-var requestUrl = 'https://api.github.com/users';
+var requestUrl = 'https://api.github.com/users/williamavasquez/repos';
 
 //Browser XMLHttpRequest, built in the browser and require more code.
 var xhr = new XMLHttpRequest();

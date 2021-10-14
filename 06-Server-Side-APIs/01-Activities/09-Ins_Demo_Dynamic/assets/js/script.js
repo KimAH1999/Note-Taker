@@ -13,10 +13,13 @@ function getApi() {
       for (var i = 0; i < data.length; i++) {
         var userName = document.createElement('h3');
         var issueTitle = document.createElement('p');
+        var avatar = document.createElement('img')
         userName.textContent = data[i].user.login;
+        avatar.setAttribute("src", data[i].user.avatar_url)
         issueTitle.textContent = data[i].title;
         issueContainer.append(userName);
         issueContainer.append(issueTitle);
+        issueContainer.append(avatar)
       }
     });
 }
