@@ -6,7 +6,8 @@ var getRepoName = function () {
   // Where is this value coming from?
   // TODO: Write your answer here
   var queryString = document.location.search;
-  var repoName = queryString.split('=')[1];
+  console.log(queryString)
+  var repoName = queryString.split('=')[1]; // array of 2 elements 
 
   if (repoName) {
     repoNameEl.textContent = repoName;
@@ -29,6 +30,7 @@ var getRepoIssues = function (repo) {
 
         // What is this checking for? Under what condition will this be `true`?
         // TODO: Write your answer here
+        console.log(response.headers)
         if (response.headers.get('Link')) {
           displayWarning(repo);
         }
