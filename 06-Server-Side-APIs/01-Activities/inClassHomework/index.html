@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+  <title>Document</title>
+</head>
+<body>
+<header>Weather Dashboard</header>
+<div class="row">
+  <div class="col-md-4">
+    <form>
+      <label for="city" class="form-label">Search for a City</label>
+      <input type="text" name="city" class="form-control" placeholder="US city name"/> 
+      <button type="submit" id="searchbtn" class="btn btn-primary my-3"> Search Weater</button>
+    </form>
+    <div id="previous-cities"></div>
+  </div>
+  
+  <div class="col-md-8">
+    <div class="row" id="main-card"></div>
+    <div class="row" id="forecast"></div>
+  </div>
+</div>
+
+
+<script src="./assets/js/script.js"></script>
+</body>
+</html>
