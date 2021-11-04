@@ -1,48 +1,48 @@
 // 1. When using var, our counter exists after a for-loop is done
 
 for (var i = 0; i < 5; i++) {
-  console.log(i);
+  // console.log(i);
 }
 
-console.log(i); // Prints 5
+// console.log(i); // Prints 5
 
 // When using let, our counter is not defined outside of the for-loop block
 
-let x = 42;
+// let x = 42;
 
-for (let j = 0; j < 5; j++) {
-  console.log(j);
-  console.log(x);
-}
+// for (let j = 0; j < 5; j++) {
+//   console.log(j);
+//   console.log(x);
+// }
 
-console.log(j); // ReferenceError: j is not defined
+//console.log(j); // ReferenceError: j is not defined
 
-let j = 42;
-console.log(j); // prints 42
+// let j = 42;
+// console.log(j); // prints 42
 
 // ==========================================================================
 
 // 2. When using while loops, any values we create inside exist outside of the while-loop block
 
-// var count = 0;
+var count = 0;
 
-// while (count < 5) {
-//   var tripled = count * 3;
-//   count++;
-// }
+while (count < 5) {
+  var tripled = count * 3;
+  count++;
+}
 
-// console.log(tripled); // Prints 12
+console.log(tripled); // Prints 12
 
 // ==========================================================================
 
 // 3. When using let, values defined inside of the while-loop block don't exist outside of it
 
-// let c = 0;
+let c = 0;
 
-// while (c < 5) {
-//   let quadrupled = c * 3;
-//   c++;
-// }
+while (c < 5) {
+  let quadrupled = c * 3;
+  c++;
+}
 
 // console.log(quadrupled); // ReferenceError: quadrupled is not defined
 
@@ -59,11 +59,18 @@ console.log(j); // prints 42
 // When using let, values defined inside of a conditional block don't exist outside
 
 // let favoriteFood;
+// favoriteFood = "Green"
 
 // if (true) {
-//   favoriteFood = "pizza";
+//   let favoriteFood = "pizza";
+//   console.log(favoriteFood)
 // }
 
-// This works since favoriteColor is not defined inside of a block
+// // This works since favoriteColor is not defined inside of a block
 // console.log(favoriteFood);
-// Prints `pizza`
+
+// console.log(x)
+// let x ="hello"
+
+console.log(y)
+var y = "yes"
