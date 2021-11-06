@@ -18,8 +18,12 @@ inquirer
       name: 'confirm',
     },
   ])
-  .then((response) =>
-    response.confirm === response.password
-      ? console.log('Success!')
-      : console.log('You forgot your password already?!')
+  .then((response) =>{
+    console.log(response)
+    return  response.confirm === response.password
+    ? console.log('Success!')
+    : console.log('You forgot your password already?!')
+  }
+  
+   
   );
