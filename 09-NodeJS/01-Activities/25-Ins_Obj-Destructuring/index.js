@@ -1,6 +1,10 @@
 const arya = {
   name: 'Arya Stark',
   parents: ['Eddard Stark', 'Catelyn Stark'],
+  kills: { 
+    lords: "Freys", 
+    demons: "ice king"
+  }
 };
 
 const jaime = {
@@ -18,7 +22,7 @@ console.log(aryaParents); // logs `["Eddard Stark", "Catelyn Stark"]`
 
 // Now with ES6 object destructuring syntax, we can do this:
 
-const { name, parents } = arya;
+const { name, parents, age } = arya;
 
 console.log(name); // logs `"Jaime Lannister"`
 console.log(parents); // logs `["Tywin Lannister", "Joanna Lannister"]`
@@ -26,6 +30,7 @@ console.log(parents); // logs `["Tywin Lannister", "Joanna Lannister"]`
 // We can also rename our destructured properties like so:
 
 const { name: jaimeName } = jaime;
+
 console.log(jaimeName); // logs `"Jaime Lannister"`
 
 // We can also destructure parameters using the same feature. e.g. previously we might have done something like this:
@@ -35,7 +40,16 @@ const logCharacter = (character) =>
     `${character.name}'s parents are: ${character.parents[0]} and ${character.parents[1]}.`
   );
 
-logCharacter(arya);
+  const logChar  = ({name,parents, kills})=>{
+
+    const { lords, demons} = kills
+    console.log(
+      `${name}'s parents are: ${parents[0]} and ${parents[1]}. and she killed ${lords} and ${demons}`
+    );
+  }
+// logCharacter(arya);
+// logChar(jaime)
+logChar(arya)
 
 // We can also use array destructuring to pull off an array's elements
 const locations = ['Winterfell', 'Casterly Rock', 'Kings Landing'];

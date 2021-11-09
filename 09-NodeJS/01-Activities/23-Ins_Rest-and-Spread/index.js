@@ -6,6 +6,7 @@ console.log(add(1, 2, 3, 4, 5)); // => 3
 
 // 1. rest
 function add(...nums) {
+  console.log(nums)
   let sum = 0;
   for (let num of nums) sum += num;
   return sum;
@@ -14,6 +15,7 @@ function add(...nums) {
 add(1); // => 1
 add(3, 3); // => 6
 add(1, 1, 4, 5); // => 11
+
 
 // 2. 
 function howManyArgs(...args) {
