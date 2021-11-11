@@ -40,5 +40,7 @@ Promise.all([p1, p2, p3])
   .then((values) => {
     console.log('\nThe returned array from our Promise.all() call:');
     console.log(values);
+
+    // call next Promise or HTTP Request
   })
   .catch((err) => new Error(err));
