@@ -18,8 +18,8 @@ dogs.makeNoise();
 cats.makeNoise();
 
 // If we want, we can change an object's properties after they're created
-// cats.raining = true;
-// cats.makeNoise();
+cats.raining = true;
+cats.makeNoise();
 
 const massHysteria = (dogs, cats) => {
   if (dogs.raining === true && cats.raining === true) {

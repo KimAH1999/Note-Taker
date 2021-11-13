@@ -1,6 +1,6 @@
 // Promise example using a real-life promise
 // The real-life promise in this scenario is a child asking his parents for a Nintendo Switch
-
+const fs = require("fs")
 const choresDone = true;
 
 // Promise
@@ -27,6 +27,27 @@ const playGames = (reward) => {
 };
 
 willGetSwitch
-  .then(playGames)
+  // .then(playGames)
   .then((resolved) => console.log(resolved))
   .catch((err) => console.error(err));
+
+
+
+
+const readTheFile = new Promise((success, reject)=>{
+
+  fs.readFile("./hello.txt","utf-8", function(err, data){
+    success(data)
+    if(err){
+      reject(err)
+    }
+  })
+
+
+})
+
+
+readTheFile
+  .then((data)=>{
+    console.log(data)
+  })
