@@ -45,5 +45,5 @@ const items = [
 const orders = items.map(item => new Order(item));
 
 orders.forEach(order => restaurant.takeOrder(order));
-
+console.log(restaurant)
 restaurant.prepareOrders();
