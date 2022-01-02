@@ -1,20 +1,14 @@
 const express = require('express');
 const path = require('path');
-const { clog } = require('./middleware/clog');
-const api = require('./routes/index.js');
+const fs = require('fs');
+const util = require('util');
 
-const PORT = process.env.port || 3001;
-
+const PORT = process.env.port || 3010;
 const app = express();
 
-// Import custom middleware, "cLog"
-app.use(clog);
-
-// Middleware for parsing JSON and urlencoded form data
+// Middleware for parsing JSON
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use('/api', api);
-
 app.use(express.static('public'));
 
 // GET Route for homepage
