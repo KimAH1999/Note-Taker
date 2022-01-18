@@ -30,7 +30,7 @@ npm install
 
 ## Usage
 
-input demo here
+https://somup.com/c3VF3yZZ0i
   
 ## Contributing
 
