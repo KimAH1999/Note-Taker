@@ -1,27 +1,20 @@
+//back-end server function
 const express = require('express');
-const path = require('path');
-const util = require('util');
+const apiRoutes = require('./routes/apiRoutes');
+const htmlRoutes = require('./routes/htmlRoutes');
 
-// Declare the port
-const PORT = process.env.PORT || 3030;
-// Starts express
+// Initialize the app and create a port
 const app = express();
+const PORT = process.env.PORT || 3030;
 
-// Middleware
-app.use(express.urlencoded({ extended: true }));
+// Sets up body parsing, static, and route middleware
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
+app.use('/api', apiRoutes);
+app.use('/', htmlRoutes);
 
-// GET Route for homepage
-app.get('/', (req, res) =>
-  res.sendFile(path.join(__dirname, '/public/index.html'))
-);
-
-// GET Route for notes page
-app.get('/notes', (req, res) =>
-  res.sendFile(path.join(__dirname, '/public/notes.html'))
-);
-
+// Starts the server on the port(In terminal npm run start)
 app.listen(PORT, () => {
-    console.log(`App listening at http://localhost:${PORT}`)
+  console.log(`App listening at http://localhost:${PORT}`)
 });
