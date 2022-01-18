@@ -5,7 +5,9 @@
 
 This Note Taker saves notes with a title and description section to save valuable information. Using Express with Node and deploying with Heroku.
 
-Link: http://localhost:3030
+Deployed Link: http://localhost:3030
+Heroku Deployed Link: https://note-takero1.herokuapp.com/
+
 ## Table of Contents 
 
 * [Installation](#installation)
@@ -33,6 +35,9 @@ npm install
 
 https://user-images.githubusercontent.com/87666809/150030618-f6330b70-cc9b-43b2-9b9b-af8849304f53.mp4
 
+![Capture1](https://user-images.githubusercontent.com/87666809/150031426-72292139-2de6-4bda-9790-d1228a2adc38.PNG)
+![Capture2](https://user-images.githubusercontent.com/87666809/150031431-342432f7-e693-433c-9389-fe93d35bf63b.PNG)
+![Capture3](https://user-images.githubusercontent.com/87666809/150031433-e6aa5d3c-5154-4bc8-854d-4acfa0b69ed8.PNG)
 
   
 ## Contributing
