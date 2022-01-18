@@ -30,7 +30,10 @@ npm install
 
 ## Usage
 
-https://somup.com/c3VF3yZZ0i
+
+https://user-images.githubusercontent.com/87666809/150030618-f6330b70-cc9b-43b2-9b9b-af8849304f53.mp4
+
+
   
 ## Contributing
 
