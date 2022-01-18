@@ -1,38 +1,30 @@
-const router = require("express").Router();
-let data = require('../db/db.json')
-const fs = require('fs');
+// routes
+const router = require('express').Router();
+const store = require('../db/store');
 
-// Shows the existed notes
-router.get('/api/notes', (req, res) => res.json(data))
-    
-currentId = data.length;
-// Add new notes
-router.post('/api/notes', (req, res) => {
-    const newData = req.body;
-
-    newData['id'] = currentId+1;
-    currentId++;
-    data.push(newData);
-    generateNotes();
-
-    return res.status(200).end();
+// GET "/api/notes" responds with all notes from database
+router.get('/notes', (req, res) => {
+  store
+    .getNotes()
+    .then((notes) => {
+      return res.json(notes);
+    })
+    .catch((err) => res.status(500).json(err));
 });
 
-// Delete the selected note
-router.delete('/api/notes/:id', (req, res) => {
-    res.send('Delete request recieved!')
-    const id = req.params.id;
-    const smallId = data.filter((small) => small.id < id);    
-    const bigId = data.filter((big) => big.id > id);
-    data = smallId.concat(bigId);
-    generateNotes();
-})
+router.post('/notes', (req, res) => {
+  store
+    .addNote(req.body)
+    .then((note) => res.json(note))
+    .catch((err) => res.status(500).json(err));
+});
 
-const generateNotes = () => {
-    fs.writeFile('db/db.json', JSON.stringify(data), (err) => {
-        if (err) throw err;
-    });
-}
-
+// DELETE "/api/notes" deletes the note with an id equal to req.params.id
+router.delete('/notes/:id', (req, res) => {
+  store
+    .removeNote(req.params.id)
+    .then(() => res.json({ ok: true }))
+    .catch((err) => res.status(500).json(err));
+});
 
 module.exports = router;
