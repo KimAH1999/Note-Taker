@@ -3,12 +3,11 @@
 
 ## Description
 
-This Note Taker saves notes with a title and description section to save valuable information. Using Express with Node and deploying with Heroku.
-
-Deployed Link: http://localhost:3030
+This Note Taker Organizer App is Hosted by Heroku and the code consist on using Express.js and Node.js.  It allows the user to store, retrieve and delete personal notes. Understanding the routing in Express.js, and getting the proper Heroku build were the key understanding in this application.
 
 
-Heroku Deployed Link: https://note-takero1.herokuapp.com/
+Deploy Live Public Test: https://note-taker-organizer.herokuapp.com/
+
 
 ## Table of Contents 
 
@@ -44,7 +43,7 @@ https://user-images.githubusercontent.com/87666809/150030618-f6330b70-cc9b-43b2-
   
 ## Contributing
 
-
+UCSD Extension Bootcamp
 
 ## Tests
 
@@ -57,4 +56,3 @@ node server.js
 ## Questions
 
 If you have any questions about the repo, open an issue or contact me directly at kimaguilar2017@gmail.com. You can find more of my work at [KimAH1999](https://github.com/KimAH1999/).
-
